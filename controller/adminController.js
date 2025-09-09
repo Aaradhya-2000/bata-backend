@@ -115,7 +115,7 @@ const OurOrder = async(req,res)=>{
     const orders = await OrderModel.find()
        // populate only name & price
       .lean(); // plain JS objects, easier for frontend
-     console.log(orders)
+    //  console.log(orders)
     res.json(orders);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch orders" });

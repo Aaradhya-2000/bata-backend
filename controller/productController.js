@@ -29,7 +29,7 @@ const proDetails =async(req,res)=>{
 const homeMenDisplay = async(req,res)=>{
     const { category} = req.query
     const Mens =  await productModel.find({category:'mens'})
-    console.log(Mens)
+    // console.log(Mens)
     res.status(200).send(Mens)
 }
 const homeWomenDisplay = async(req,res)=>{
@@ -37,7 +37,7 @@ const homeWomenDisplay = async(req,res)=>{
     // res.send("okk")
     const { category} = req.query
     const Women =  await productModel.find({category:'womens'})
-    console.log(Women)
+    // console.log(Women)
     res.status(200).send(Women)
 }
 

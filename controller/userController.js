@@ -37,14 +37,14 @@ const userLogin = async (req, res) => {
   
     try {
       const User = await userModel.findOne({ email: email });
-      console.log(User);
+      // console.log(User);
   
       if (!User) {
         return res.status(401).send({ msg: "Invalid Email Id" });
       }
   
       const compare = await bcrypt.compare(password, User.password);
-      console.log(compare);
+      // console.log(compare);
   
       if (!compare) {
         return res.status(401).send({ msg: "Invalid password" });
