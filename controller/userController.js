@@ -149,7 +149,7 @@ const order = async(req,res)=>{
   const{ email } = req.query
   const userOrder = await OrderModel.findOne({email:email})
   console.log(userOrder)
-  res.send("OKK")
+  res.send(userOrder)
 }
 module.exports = {
      signup ,
