@@ -195,6 +195,10 @@ const updatepro = async(req,res)=>{
     res.status(500).send({ msg: "Update failed" });
   }
 }
+const Order = async(req,res)=>{
+  res.send("okk")
+  console.log(req.body)
+}
 module.exports = {
   adminLogin,
   productSave,
@@ -202,5 +206,6 @@ module.exports = {
   changeTaskStatus,
   allpro,
   deletepro,
-  updatepro
+  updatepro,
+  Order
 };
