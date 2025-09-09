@@ -146,8 +146,10 @@ const getUserReview = async(req,res)=>{
       res.send({msg:"reviews",review:getReview})
 }
 const order = async(req,res)=>{
-    res.send("ok")
-    console.log(req.query)
+  const{ email } = req.query
+  const userOrder = await OrderModel.findOne({email:email})
+  console.log(userOrder)
+  res.send("OKK")
 }
 module.exports = {
      signup ,
