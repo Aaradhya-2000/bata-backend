@@ -147,7 +147,7 @@ const getUserReview = async(req,res)=>{
 }
 const order = async(req,res)=>{
   const{ email } = req.query
-  const userOrder = await OrderModel.findOne({email:email})
+  const userOrder = await OrderModel.find({email:email})
   console.log(userOrder)
   res.send(userOrder)
 }
