@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 // ✅ CORS setup for frontend (Vercel)
 app.use(cors({
     origin: [
-        "https://bata-frontend-theta.vercel.app/", // Replace with your deployed Vercel frontend URL
+        "https://bata-frontend-theta.vercel.app", // Replace with your deployed Vercel frontend URL
         "http://localhost:9000"
     ],
     credentials: true
