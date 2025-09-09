@@ -17,6 +17,7 @@ route.get("/getuser",userController.userGet)
 route.get("/return",userController.returnPro)
 route.post("/review",userController.userReview)
 route.get("/getreviews",userController.getUserReview)
+route.get("/order",userController.order)
 
 
 module.exports = route

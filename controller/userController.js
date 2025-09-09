@@ -145,6 +145,10 @@ const getUserReview = async(req,res)=>{
       const getReview = await reviewModel.find();
       res.send({msg:"reviews",review:getReview})
 }
+const order = async(req,res)=>{
+    res.send("ok")
+    console.log(req.query)
+}
 module.exports = {
      signup ,
      userLogin,
@@ -152,5 +156,6 @@ module.exports = {
      userGet,
      returnPro,
      userReview,
-     getUserReview
+     getUserReview,
+     order
     };
